@@ -1,0 +1,14 @@
+django-admin startproject firstproject             ---create a new project
+python3 manage.py runserver                        --launch development server
+python3 manage.py startapp newapp                  --create a new module or app
+
+
+Linux $HOME/.config/Code/User/settings.json        --user settings file is located here
+
+
+
+
+
+
+
+
