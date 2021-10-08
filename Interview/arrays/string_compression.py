@@ -30,7 +30,7 @@ def string_compression1(string):
 			char = string[i]
 		i += 1
 	new_string += char+str(count)
-		
+
 	return new_string
 
 print(string_compression('AAABCCDDDDD'))
