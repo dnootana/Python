@@ -1,5 +1,12 @@
 #!/usr/bin/env python3.8
 
+"""
+Given a singly linked list, write a function which returns a boolean indicating if the linked list contains a "cycle" and return the node at the beggining of the loop
+0->1->2->3->4
+<-8<-7<-6<-5<-
+should return 0 and linked list is a cycle
+"""
+
 import singly_linked_list as SLinked_List
 
 #using OOP

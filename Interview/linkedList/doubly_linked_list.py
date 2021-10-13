@@ -1,5 +1,9 @@
 #!/usr/bin/env python3.8
 
+"""
+implement a doubly linked list
+"""
+
 class Node(object):
 	def __init__(self, value):
 		self.value = value
