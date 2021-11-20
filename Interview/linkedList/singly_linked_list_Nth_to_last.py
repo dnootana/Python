@@ -41,18 +41,21 @@ class Nth_to_Last(SLinked_List.SinglyLinkedList):
 			temp = temp.nextnode
 		return temp.value
 
+def main():
+	l = Nth_to_Last()
+	l.insert_tail(0)
+	l.insert_tail(1)
+	l.insert_tail(2)
+	l.insert_tail(3)
+	l.insert_tail(4)
+	l.insert_tail(5)
+	l.insert_tail(6)
+	l.insert_tail(7)
+	l.insert_tail(8)
+	print(l.traverse())
+	print(l.get_nth_to_last(1))
+	print(l.get_nth_to_last1(1))
+	print(l.get_nth_to_last2(1))
 
-l = Nth_to_Last()
-l.insert_tail(0)
-l.insert_tail(1)
-l.insert_tail(2)
-l.insert_tail(3)
-l.insert_tail(4)
-l.insert_tail(5)
-l.insert_tail(6)
-l.insert_tail(7)
-l.insert_tail(8)
-print(l.traverse())
-print(l.get_nth_to_last(1))
-print(l.get_nth_to_last1(1))
-print(l.get_nth_to_last2(1))
+if __name__ == "__main__":
+	main()

@@ -24,9 +24,13 @@ class Stack(object):
 	def peek(self):
 		return self.items[len(self.items)-1]
 
-# s = Stack()
-# for i in range(5):
-#     s.push(i)
-    
-# for i in range(5):
-#     print(s.pop())
+def main():
+	s = Stack()
+	for i in range(5):
+		s.push(i)
+
+	for i in range(5):
+		print(s.pop())
+
+if __name__ == "__main__":
+	main()

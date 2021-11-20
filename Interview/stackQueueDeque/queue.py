@@ -21,10 +21,14 @@ class Queue(object):
 		self.size -= 1
 		return self.items.pop()
 
-q = Queue()
+def main():
+	q = Queue()
 
-for i in range(5):
-    q.enqueue(i)
-    
-for i in range(5):
-    print(q.dequeue())
+	for i in range(5):
+		q.enqueue(i)
+
+	for i in range(5):
+		print(q.dequeue())
+
+if __name__ == "__main__":
+	main()

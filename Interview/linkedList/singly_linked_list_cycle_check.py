@@ -40,27 +40,28 @@ class lList_checks(SLinked_List.SinglyLinkedList):
 				return True
 		return False
 
-l = lList_checks()
-l.insert_tail(0)
-l.insert_tail(1)
-l.insert_tail(2)
-l.insert_tail(3)
-l.insert_tail(4)
-l.insert_tail(5)
-l.insert_tail(6)
-l.insert_tail(7)
-l.insert_tail(8)
+def main1():
+	l = lList_checks()
+	l.insert_tail(0)
+	l.insert_tail(1)
+	l.insert_tail(2)
+	l.insert_tail(3)
+	l.insert_tail(4)
+	l.insert_tail(5)
+	l.insert_tail(6)
+	l.insert_tail(7)
+	l.insert_tail(8)
 
 
-print(l.head.value)
-print(l.traverse())
-print("linked list is", "a cycle" if l.cycle_check() else "not a cycle")
+	print(l.head.value)
+	print(l.traverse())
+	print("linked list is", "a cycle" if l.cycle_check() else "not a cycle")
 
-#creating loop
-l.tail.set_nextnode(l.head)
+	#creating loop
+	l.tail.set_nextnode(l.head)
 
-print("linked list is", "a cycle" if l.cycle_check() else "not a cycle")
-print("linked list is", "a cycle" if l.cycle_check1() else "not a cycle")
+	print("linked list is", "a cycle" if l.cycle_check() else "not a cycle")
+	print("linked list is", "a cycle" if l.cycle_check1() else "not a cycle")
 
 #without using OOP
 #hashmap
@@ -85,21 +86,25 @@ def cycle_check1(lList):
 		runner = runner.nextnode.nextnode
 	return False
 
-l = SLinked_List.SinglyLinkedList()
-l.insert_tail(0)
-l.insert_tail(1)
-l.insert_tail(2)
-l.insert_tail(3)
-l.insert_tail(4)
-l.insert_tail(5)
-l.insert_tail(6)
-l.insert_tail(7)
-l.insert_tail(8)
+def main2():
+	l = SLinked_List.SinglyLinkedList()
+	l.insert_tail(0)
+	l.insert_tail(1)
+	l.insert_tail(2)
+	l.insert_tail(3)
+	l.insert_tail(4)
+	l.insert_tail(5)
+	l.insert_tail(6)
+	l.insert_tail(7)
+	l.insert_tail(8)
 
-print("linked list is", "a cycle" if cycle_check(l) else "not a cycle")
+	print("linked list is", "a cycle" if cycle_check(l) else "not a cycle")
 
-#creating loop
-l.tail.set_nextnode(l.head.nextnode.nextnode)
+	#creating loop
+	l.tail.set_nextnode(l.head.nextnode.nextnode)
 
-print("linked list is", "a cycle" if cycle_check(l) else "not a cycle")
-print("linked list is", "a cycle" if cycle_check1(l) else "not a cycle")
+	print("linked list is", "a cycle" if cycle_check(l) else "not a cycle")
+	print("linked list is", "a cycle" if cycle_check1(l) else "not a cycle")
+
+if __name__ == "__main__":
+	main1()

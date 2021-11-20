@@ -55,17 +55,21 @@ class Reverse_list(SLinked_List.SinglyLinkedList):
 		temp.nextnode = None
 		return
 
-l = Reverse_list()
-l.insert_tail(0)
-l.insert_tail(1)
-l.insert_tail(2)
-l.insert_tail(3)
-l.insert_tail(4)
-l.insert_tail(5)
-l.insert_tail(6)
-l.insert_tail(7)
-l.insert_tail(8)
-# l.reserse_list()
-# l.reserse_list1()
-l.reserse_list2()
-print(l.traverse())
+def main():
+	l = Reverse_list()
+	l.insert_tail(0)
+	l.insert_tail(1)
+	l.insert_tail(2)
+	l.insert_tail(3)
+	l.insert_tail(4)
+	l.insert_tail(5)
+	l.insert_tail(6)
+	l.insert_tail(7)
+	l.insert_tail(8)
+	# l.reserse_list()
+	# l.reserse_list1()
+	l.reserse_list2()
+	print(l.traverse())
+
+if __name__ == "__main__":
+	main()

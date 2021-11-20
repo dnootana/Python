@@ -31,10 +31,14 @@ class Deque:
 		self.size -= 1
 		return self.items.pop(0)
 
-d = Deque()
+def main():
+	d = Deque()
 
-for i in range(5):
-    d.addFront(i)
-    
-for i in range(5):
-    print(d.deleteFront())
+	for i in range(5):
+		d.addFront(i)
+
+	for i in range(5):
+		print(d.deleteFront())
+
+if __name__ == "__main__":
+	main()

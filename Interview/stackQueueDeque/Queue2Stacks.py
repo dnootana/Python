@@ -14,11 +14,14 @@ class Queue2Stacks(object):
 				self.outstack.append(self.instack.pop())
 		return self.outstack.pop()
 
+def main():
+	q = Queue2Stacks()
 
-q = Queue2Stacks()
+	for i in range(5):
+		q.enqueue(i)
 
-for i in range(5):
-    q.enqueue(i)
-    
-for i in range(5):
-    print(q.dequeue())
+	for i in range(5):
+		print(q.dequeue())
+
+if __name__ == "__main__":
+	main()

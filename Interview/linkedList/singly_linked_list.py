@@ -87,23 +87,25 @@ class SinglyLinkedList(object):
 			current = current.get_nextnode()
 		return data
 
+def main():
+	a = SinglyLinkedList()
+	a.insert_head(1)
+	a.insert_tail(2)
+	a.insert_head(0)
+	a.insert_tail(3)
+	a.insert_tail(4)
+	# print(a.head.get_data())
+	# print(a.tail.get_data())
+	# print(a.size())
+	# print(a.traverse())
+	# print(a.delete_head())
+	# print(a.size())
+	# print(a.traverse())
+	# a.insert_between(5,2)
+	# print(a.traverse())
+	# a.insert_between(9,7)
+	# print(a.traverse())
 
-a = SinglyLinkedList()
-a.insert_head(1)
-a.insert_tail(2)
-a.insert_head(0)
-a.insert_tail(3)
-a.insert_tail(4)
-# print(a.head.get_data())
-# print(a.tail.get_data())
-# print(a.size())
-# print(a.traverse())
-# print(a.delete_head())
-# print(a.size())
-# print(a.traverse())
-# a.insert_between(5,2)
-# print(a.traverse())
-# a.insert_between(9,7)
-# print(a.traverse())
 
-
+if __name__ == "__main__":
+	main()

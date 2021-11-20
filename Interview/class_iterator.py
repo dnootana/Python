@@ -24,3 +24,7 @@ my_sentence = sentence("This is a test")
 
 for word in my_sentence:
 	print(word)
+
+class_sentense = Sentence("This is a test")
+for word in class_sentense:
+	print(word)
