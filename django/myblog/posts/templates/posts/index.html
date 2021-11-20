@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'posts/posts.css' %}" >
+{% endblock  %}
+
+{% block page_title %}main page{% endblock  %}
+
+{% block page_content %}
+{% include 'posts/includes/header.html' %}
+<p>hello hai how are you??</p>
+<b>my new posts are here</b>
+{% endblock  %}

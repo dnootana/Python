@@ -1,4 +1,4 @@
-"""firstproject URL Configuration
+"""myblog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from challenges import views
+from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('challenge/', views.index), when challenge/ is called index function in views will be called
-    path('challenge/', include("challenges.urls"))
+    path('', views.index),
+    path('posts/', include("posts.urls"))
 ]

@@ -1,7 +1,10 @@
 #!/usr/bin/env python3.8
 
+import requests
+
+
 class Employee:
-	raise_amount = 1.04    #class variable
+	raise_amount = 1.10    #class variable
 	no_of_employees = 0
 	def __init__(self, fname, lname, salary):   #dunder method
 		self.fname = fname               #instance variable
@@ -64,6 +67,13 @@ class Employee:
 		self.fname = None
 		self.lname = None
 
+	def monthly_schedule(self, month):
+		response = requests.get(f'http://company.com/{self.lname}/{month}')
+		if response.ok:
+			return response.text
+		else:
+			return 'Bad Response!'
+
 def main():
 	emp1 = Employee("Nootana", "D", 1000)
 
@@ -104,6 +114,7 @@ def main():
 	del emp1.fullname
 	print(emp1.fullname)
 	print(emp1.email)
+	print(emp1.monthly_schedule("May"))
 
 if __name__ == "__main__":
 	main()
