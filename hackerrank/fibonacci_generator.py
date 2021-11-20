@@ -20,4 +20,4 @@ fib_num1 = []
 x = fib_gen1()
 for num in range(50):
 	fib_num1.append(x.__next__())
-print('Fibonacci series upto 50 are : ',', '.join(list(map(str,fib_num1))))
+print('Fibonacci series of 50 numbers are : ',', '.join(list(map(str,fib_num1))))
