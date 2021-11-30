@@ -26,7 +26,6 @@ def postOrder(tree):
 	"""
 		<left><right><root>
 	"""
-	# list_a.append(tree.getRootVal())
 	if tree:
 		postOrder(tree.getLeftVal())
 		postOrder(tree.getRightVal())
@@ -61,7 +60,5 @@ r.getRightVal().insertRight("Section 2.2")
 # preOrder(r)
 # print("Inorder Traversal")
 # inOrder(r)
-list_a = []
 print("Postorder Traversal")
 postOrder(r)
-print(list_a)
