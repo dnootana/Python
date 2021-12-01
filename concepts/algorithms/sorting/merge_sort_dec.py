@@ -1,38 +1,47 @@
 #!/usr/bin/python3.8
+
+import random
+import copy
 import math
 
-def mergeSort(Arr,l,r):
-	if l<r:
-		m = (l+r)//2
-		mergeSort(Arr,l,m)
-		mergeSort(Arr,m+1,r)
-		merge(Arr,l,m,r)
+def merge_sort_dec(arr, start, end):
+	"""
+		Merge Sort is a Divide and Conquer algorithm
+		It is a recursive algorithm which continually splits a list in half until the list is empty or has one item and then recursively merges them sorting simultaneously
+		it has O(n(log n)) time complexity
+	"""
+	if start < end:
+		mid = (start + end) // 2
+		merge_sort_dec(arr, start, mid)
+		merge_sort_dec(arr, mid+1, end)
+		merge(arr, start, mid, end)
+	return arr
 
-def merge(Arr,l,m,r):
-	nL = m-l+1
-	nR = r-m
-	L = [0]*(nL+1)
-	R = [0]*(nR+1)
+def merge(arr, start, mid, end):
+	nL = mid - start + 1
+	nR = end - mid
+	L = (nL + 1) * [0]
+	R = (nR + 1) * [0]
 	for i in range(nL):
-		L[i] = Arr[l+i]
+		L[i] = arr[start+i]
 	for j in range(nR):
-		R[j] = Arr[m+1+j]
+		R[j] = arr[mid+1+j]
 	L[nL] = -math.inf
 	R[nR] = -math.inf
 	i = 0
 	j = 0
-	for k in range(l,r+1):
-		if L[i]>=R[j]:
-			Arr[k]=L[i]
-			i+=1
-
+	for k in range(start, end+1):
+		if L[i] >= R[j]:
+			arr[k] = L[i]
+			i += 1
 		else:
-			Arr[k]=R[j]
-			j+=1
+			arr[k] = R[j]
+			j += 1
 
 #A = [int(x) for x in input("Enter the Elements : ").split()]
-A = list(map(int,input("Enter the Elements : ").split()))
-print(A)
-#A = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-mergeSort(A, 0, len(A)-1)
-print(A)
+# A = list(map(int,input("Enter the Elements : ").split()))
+arr = [9,8,7,6,5,4,3,2,1]
+# arr = [i for i in range(1,101)]
+random.shuffle(arr)
+array = merge_sort_dec(copy.deepcopy(arr), 0, len(arr)-1)
+print(array)
