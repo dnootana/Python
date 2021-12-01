@@ -1,25 +1,30 @@
 #!/usr/bin/python3.8
 
-def mergeSort(arr,l,r):
-	if l<r:
-		m = (l+r)//2
-		mergeSort(arr,l,m)
-		mergeSort(arr,m+1,r)
-		print(arr)
-		merge(arr,l,m,r)
+def merge_sort_inc(arr, start, end):
+	"""
+		Merge Sort is a Divide and Conquer algorithm
+		It is a recursive algorithm which continually splits a list in half until the list is empty or has one item and then recursively merges them sorting simultaneously
+		it has O(n(log n)) time complexity
+	"""
+	if start < end:
+		mid = (start + end) // 2
+		merge_sort_inc(arr, start, mid)
+		merge_sort_inc(arr, mid+1, end)
+		merge(arr, start, mid, end)
+	return arr
 
-def merge(arr,l,m,r):
-	nL = m-l+1
-	nR = r-m
-	L = [0]*(nL)
-	R = [0]*(nR)
+def merge(arr, start, mid, end):
+	nL = mid - start + 1
+	nR = end - mid
+	L = nL * [0]
+	R = nR * [0]
 	for i in range(nL):
-		L[i]=arr[l+i]
+		L[i] = arr[start+i]
 	for j in range(nR):
-		R[j]=arr[m+1+j]
+		R[j] = arr[mid+1+j]
 	i=0
 	j=0
-	for k in range(l,r+1):
+	for k in range(start, end+1):
 		if i<nL and (j>=nR or L[i]<=R[j]):
 			arr[k]=L[i]
 			i+=1
@@ -29,5 +34,5 @@ def merge(arr,l,m,r):
 
 #A = [int(x) for i in input("Enter Elements : ").split()]
 A = [9,8,7,6,5,4,3,2,1,0]
-mergeSort(A,0,len(A)-1)
+merge_sort_inc(A,0,len(A)-1)
 print(A)
