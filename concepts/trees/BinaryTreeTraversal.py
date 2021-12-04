@@ -31,34 +31,39 @@ def postOrder(tree):
 		postOrder(tree.getRightVal())
 		print(tree.getRootVal())
 
-r = BinaryTree('Book')
-# print(r.getRootVal())
+def main():
+	r = BinaryTree('Book')
+	# print(r.getRootVal())
 
-r.insertLeft("Chapter1")
-# print(r.getLeftVal().getRootVal())
+	r.insertLeft("Chapter1")
+	# print(r.getLeftVal().getRootVal())
 
-r.getLeftVal().insertLeft("Section 1.1")
+	r.getLeftVal().insertLeft("Section 1.1")
 
-r.getLeftVal().insertRight("Section 1.2")
+	r.getLeftVal().insertRight("Section 1.2")
 
-r.getLeftVal().getRightVal().insertLeft("Section 1.2.1")
+	r.getLeftVal().getRightVal().insertLeft("Section 1.2.1")
 
-r.getLeftVal().getRightVal().insertRight("Section 1.2.2")
+	r.getLeftVal().getRightVal().insertRight("Section 1.2.2")
 
-r.insertRight("Chapter2")
-# print(r.getRightVal().getRootVal())
+	r.insertRight("Chapter2")
+	# print(r.getRightVal().getRootVal())
 
-r.getRightVal().insertLeft("Section 2.1")
+	r.getRightVal().insertLeft("Section 2.1")
 
-r.getRightVal().getLeftVal().insertLeft("Section 2.1.1")
+	r.getRightVal().getLeftVal().insertLeft("Section 2.1.1")
 
-r.getRightVal().getLeftVal().insertRight("Section 2.1.2")
+	r.getRightVal().getLeftVal().insertRight("Section 2.1.2")
 
-r.getRightVal().insertRight("Section 2.2")
+	r.getRightVal().insertRight("Section 2.2")
 
-# print("Preorder Traversal")
-# preOrder(r)
-# print("Inorder Traversal")
-# inOrder(r)
-print("Postorder Traversal")
-postOrder(r)
+	# print("Preorder Traversal")
+	# preOrder(r)
+	# print("Inorder Traversal")
+	# inOrder(r)
+	print("Postorder Traversal")
+	postOrder(r)
+
+
+if __name__ == "__main__":
+	main()
