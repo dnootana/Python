@@ -57,22 +57,26 @@ class MinHeap:
 			self.percDown(i)
 			i = i - 1
 
-list_given = [6, 10, 34, 23, 12, 3, 5, 2, 9, 5, 3, 2, 9, 10]
-Heap = MinHeap()
-Heap.buildHeap(list_given)
-print("0 ",list_given)
-print("Heap from the list : ")
-print(Heap.HeapList)
+def main():
+	list_given = [6, 10, 34, 23, 12, 3, 5, 2, 9, 5, 3, 2, 9, 10]
+	Heap = MinHeap()
+	Heap.buildHeap(list_given)
+	print("0 ",list_given)
+	print("Heap from the list : ")
+	print(Heap.HeapList)
 
-# print("\nBuilding a Heap :")
-# my_heap = MinHeap()
-# my_heap.insert(5)
-# my_heap.insert(6)
-# my_heap.insert(7)
-# my_heap.insert(9)
-# my_heap.insert(13)
-# my_heap.insert(11)
-# my_heap.insert(10)
-# print(my_heap.HeapList)
-# print(my_heap.delMin())
-# print(my_heap.HeapList)
+	# print("\nBuilding a Heap :")
+	# my_heap = MinHeap()
+	# my_heap.insert(5)
+	# my_heap.insert(6)
+	# my_heap.insert(7)
+	# my_heap.insert(9)
+	# my_heap.insert(13)
+	# my_heap.insert(11)
+	# my_heap.insert(10)
+	# print(my_heap.HeapList)
+	# print(my_heap.delMin())
+	# print(my_heap.HeapList)
+
+if __name__ == "__main__":
+	main()

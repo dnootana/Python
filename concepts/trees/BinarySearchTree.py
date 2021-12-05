@@ -11,7 +11,7 @@ class TreeNode:
 		self.parent = parent
 
 	def getRootVal(self):
-		return self.key, self.payload
+		return self.key
 
 	def getLeftVal(self):
 		return self.leftChild
@@ -205,14 +205,17 @@ class BinarySearchTree:
 				else:
 					currentNode.replaceNodeData(currentNode.leftChild.key, currentNode.leftChild.payload, currentNode.leftChild.leftChild, currentNode.leftChild.rightChild)
 
-	
-mytree = BinarySearchTree()
-mytree[3]="red"
-mytree[4]="blue"
-mytree[6]="yellow"
-mytree[2]="at"
-mytree[1]="apple"
-mytree[5]="rat"
+def main():
+	mytree = BinarySearchTree()
+	mytree[3]="red"
+	mytree[4]="blue"
+	mytree[6]="yellow"
+	mytree[2]="at"
+	mytree[1]="apple"
+	mytree[5]="rat"
 
-# print(help(mytree))
-traverse.inOrder(mytree.root)
+	# print(help(mytree))
+	traverse.inOrder(mytree.root)
+
+if __name__ == "__main__":
+	main()

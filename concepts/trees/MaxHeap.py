@@ -49,23 +49,26 @@ class MaxHeap:
 			self.percDown(i)
 			i = i -1
 
+def main():
+	list_given = [1, 2, 3, 4, 5, 6, 7, 8]
+	Heap = MaxHeap()
+	Heap.buildHeap(list_given)
+	print("0 ",list_given)
+	print("Heap from the list : ")
+	print(Heap.HeapList)
 
-list_given = [1, 2, 3, 4, 5, 6, 7, 8]
-Heap = MaxHeap()
-Heap.buildHeap(list_given)
-print("0 ",list_given)
-print("Heap from the list : ")
-print(Heap.HeapList)
+	print("\nBuilding a Heap :")
+	my_heap = MaxHeap()
+	my_heap.insert(5)
+	my_heap.insert(6)
+	my_heap.insert(7)
+	my_heap.insert(9)
+	my_heap.insert(13)
+	my_heap.insert(11)
+	my_heap.insert(10)
+	print(my_heap.HeapList)
+	print(my_heap.delMax())
+	print(my_heap.HeapList)
 
-print("\nBuilding a Heap :")
-my_heap = MaxHeap()
-my_heap.insert(5)
-my_heap.insert(6)
-my_heap.insert(7)
-my_heap.insert(9)
-my_heap.insert(13)
-my_heap.insert(11)
-my_heap.insert(10)
-print(my_heap.HeapList)
-print(my_heap.delMax())
-print(my_heap.HeapList)
+if __name__ == "__main__":
+	main()
