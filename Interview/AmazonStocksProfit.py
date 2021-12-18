@@ -34,8 +34,7 @@ def maxprofit(P):
 
 def maxprofit1(P):
 	"""
-	Brute Force solution
-	time complexity : O(n2)
+	time complexity : O(n)
 	"""
 	if len(P) < 2:
 		raise Exception("Need at least 2 stock prices")
