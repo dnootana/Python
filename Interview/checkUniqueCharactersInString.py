@@ -34,7 +34,7 @@ def checkUnique2(String):
 	checker = 0
 	for i in range(len(String)):
 		val = ord(String[i])
-		print(checker, val, 1<<val)
+		# print(checker, val, 1<<val)
 		if ((checker & (1<<val)) > 0):
 			return False
 		checker = checker|(1<<val)
@@ -60,7 +60,40 @@ def checkUnique4(String):
 			return False
 	return True
 
+def uni_char(string):
+	return len(string) == len(set(string))
 
-All = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
-Str = " a bs"
-print(checkUnique3(Str))
+def uni_char1(string):
+	letters = set()
+
+	for char in string:
+		if char in letters:
+			return False
+		else:
+			letters.add(char)
+	return True
+
+def uni_char2(string):
+	letters = {}
+
+	for char in string:
+		if char in letters:
+			return False
+		else:
+			letters[char] = True
+	return True
+
+def main():
+	All = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
+	string = 'abcdaefg'
+	print(uni_char(string))
+	print(uni_char1(string))
+	print(uni_char2(string))
+	print(checkUnique(string))
+	print(checkUnique1(string))
+	print(checkUnique2(string))
+	print(checkUnique3(string))
+	print(checkUnique4(string))
+
+if __name__ == "__main__":
+	main()
